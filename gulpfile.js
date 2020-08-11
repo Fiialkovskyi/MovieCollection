@@ -10,7 +10,6 @@ var browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
   return gulp.src("source/sass/style.scss")
-    .pipe(sourcemaps.init())
     .pipe(sass({
       errorLogToConsole: true,
       outputStyle: 'compressed'

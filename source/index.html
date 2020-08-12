@@ -80,8 +80,17 @@
 
       </form>
 
-      <section class="search-results" id="searchResults">
+      <section class="search-results" id="searchResults"></section>
+
+      <section class="search-pagination">
+        <p class="search-pagination__items">Items per page: 10</p>
+        <div class="search-pagination__pages" id="pagination"></div>
+        <div class="search-pagination__links">
+          <a class="search-pagination__link search-pagination__link--prev" id="pagination-prev" href="#">&#60;Prev</a>
+          <a class="search-pagination__link search-pagination__link--next" id="pagination-next" href="#">Next&#62;</a>
+        </div>
       </section>
+
     </article>
   </main>
   <footer class="page-footer">

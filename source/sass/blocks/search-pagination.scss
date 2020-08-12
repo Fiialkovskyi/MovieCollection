@@ -1,0 +1,54 @@
+.search-pagination {
+  display: none;
+
+  &--show {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.search-pagination__items {
+  margin: 0;
+}
+
+.search-pagination__pages {
+  margin: 0;
+  margin-left: 41px;
+}
+
+.search-pagination__link {
+  color: #000000;
+  text-decoration: none;
+
+  &--next {
+    margin-left: 13px;
+  }
+
+  &--prev {
+    margin-left: 37px;
+  }
+}
+
+@media (max-width: 659px) {
+  .search-pagination {
+    &--show {
+      justify-content: space-between;
+    }
+  }
+
+  .search-pagination__links {
+    width: 100%;
+  }
+
+  .search-pagination__link {
+    &--prev {
+      margin: 0;
+    }
+
+    &--next {
+      margin: 0;
+    }
+  }
+}

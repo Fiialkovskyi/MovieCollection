@@ -1,0 +1,89 @@
+.social {
+  margin-left: 186px;
+}
+
+.social__title {
+  margin: 0;
+
+  font-family: ProximaNova, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f3eeea;
+}
+
+.social__items {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-top: 27px;
+  padding: 0;
+
+  width: 192px;
+
+  list-style: none;
+}
+
+.social__item {
+  margin: 0;
+  padding: 0;
+}
+
+.social__link {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  background-size: 32px;
+  background-repeat: no-repeat;
+
+  &--facebook {
+    background-image: url("../../img/facebook.png");
+  }
+
+  &--twitter {
+    background-image: url("../../img/twitter.png");
+  }
+
+  &--youtube {
+    background-image: url("../../img/youtube.png");
+  }
+
+  &--paypal {
+    background-image: url("../../img/paypal.png");
+  }
+
+  &--email {
+    background-image: url("../../img/email.png");
+  }
+}
+
+@media (max-width: 1001px) {
+  .social {
+    margin-top: 20px;
+    margin-left: 0;
+
+    width: 100%;
+  }
+
+  .social__title {
+    text-align: center;
+  }
+
+  .social__items {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 659px) {
+  .social {
+    margin-top: 0;
+  }
+
+  .social__items {
+    margin-top: 5px;
+  }
+}

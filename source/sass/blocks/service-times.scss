@@ -1,0 +1,48 @@
+.service-times {
+  margin-left: 69px;
+
+  font-family: ProximaNova, Arial, sans-serif;
+  color: #f3eeea;
+}
+
+.service-times__title {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.service-times__schedule {
+  margin: 0;
+  margin-top: 23px;
+
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.service-times__text {
+  margin: 0;
+  margin-top: 2px;
+
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+@media (max-width: 1001px) {
+  .service-times {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 659px) {
+  .service-times {
+    padding-bottom: 20px;
+  }
+
+  .service-times__schedule {
+    margin-top: 5px;
+  }
+}

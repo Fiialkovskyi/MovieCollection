@@ -1,0 +1,40 @@
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-bottom: 78px;
+}
+
+.search-results__item {
+
+  margin-top: 20px;
+  width: 320px;
+
+  &:hover {
+    box-shadow: 0 0  5px 1px #000000;
+  }
+}
+
+.search-results__poster {
+  width: 320px;
+  height: 425px;
+}
+
+.search-results__title {
+  text-align: center;
+}
+
+@media (max-width: 1001px) {
+  .search-results {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 659px) {
+  .search-results {
+    justify-content: center;
+
+    padding-bottom: 20px;
+  }
+}

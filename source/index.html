@@ -34,12 +34,40 @@
   </header>
   <main>
     <section class="slider">
-      <img class="slider__image slider__image--first" src="img/slider-item-1.jpg" width="1400" height="518" alt="First slide">
-      <div class="slider__wrapper">
-        <h2 class="slider__title">
-          <b>Welcome to MovieCollection website</b> which is run by the friends of MovieCollection.
-        </h2>
+      <div class="cycle-slideshow"
+           data-cycle-fx="scrollHorz"
+           data-cycle-timeout="0"
+           data-cycle-prev="#prev"
+           data-cycle-next="#next"
+           data-slides="> div"
+      >
+        <div class="slider__slide">
+          <img class="slider__image" src="img/slider-item-1.jpg" width="1400" height="518" alt="First slide">
+          <div class="slider__wrapper">
+            <h2 class="slider__title">
+              <b>Welcome to MovieCollection website</b> which is run by the friends of MovieCollection.
+            </h2>
+          </div>
+        </div>
+        <div class="slider__slide">
+          <img class="slider__image" src="img/slider-item-1.jpg" width="1400" height="518" alt="Second slide">
+          <div class="slider__wrapper">
+            <h2 class="slider__title">
+              <b>Welcome to MovieCollection website</b> which is run by the friends of MovieCollection.
+            </h2>
+          </div>
+        </div>
+        <div class="slider__slide">
+          <img class="slider__image" src="img/slider-item-1.jpg" width="1400" height="518" alt="Third slide">
+          <div class="slider__wrapper">
+            <h2 class="slider__title">
+              <b>Welcome to MovieCollection website</b> which is run by the friends of MovieCollection.
+            </h2>
+          </div>
+        </div>
       </div>
+      <a class="slider__control slider__control--prev" href="#" id="prev"></a>
+      <a class="slider__control slider__control--next" href="#" id="next"></a>
     </section>
 
     <article class="search">
@@ -99,7 +127,9 @@
     </div>
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="http://malsup.github.com/jquery.cycle2.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/slider.js"></script>
   <script src="js/searchMovies.js"></script>
 </body>
 </html>

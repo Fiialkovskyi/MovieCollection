@@ -1,4 +1,5 @@
 var page = 1;
+var pageCount = 0;
 
 $(document).ready(function () {
   $("#searchForm").submit(function (event) {
@@ -6,6 +7,22 @@ $(document).ready(function () {
     var searchText = $("#searchField").val();
     page = 1;
     getMovies(searchText);
+
+    $("#pagination-next").click(function (event) {
+      event.preventDefault();
+      if (page < pageCount) {
+        page++;
+      }
+      getMovies(searchText);
+    });
+
+    $("#pagination-prev").click(function (event) {
+      event.preventDefault();
+      if(page > 1) {
+        page--;
+      }
+      getMovies(searchText);
+    });
   });
 });
 
@@ -19,7 +36,7 @@ function getMovies(searchText) {
       var error = responce.data.Error;
       var totalResults = responce.data.totalResults;
       var postsPerPage = 10;
-      var pageCount = Math.ceil(totalResults / postsPerPage);
+      pageCount = Math.ceil(totalResults / postsPerPage);
       var output = "";
       var paginationOutput = "";
 
@@ -46,22 +63,6 @@ function getMovies(searchText) {
           $(".search-pagination").addClass("search-pagination--show");
         }
 
-        $("#pagination-next").click(function (event) {
-          event.preventDefault();
-          if (page < pageCount) {
-            page++;
-          }
-          getMovies(searchText);
-        });
-
-        $("#pagination-prev").click(function (event) {
-          event.preventDefault();
-          if(page > 1) {
-            page--;
-          }
-          getMovies(searchText);
-        });
-
         paginationOutput = `
           <p>${postsPerPage * (page - 1)} - ${postsPerPage * page} of ${totalResults}</p>
         `;
@@ -74,5 +75,4 @@ function getMovies(searchText) {
       console.log(err);
     })
 }
-
 

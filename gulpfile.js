@@ -18,8 +18,7 @@ gulp.task('sass', function () {
       cascade: false
     }))
     .pipe(rename({suffix: '.min'}))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./source/css'))
+    .pipe(gulp.dest('./source/css/min'))
     .pipe(browserSync.reload({stream: true}))
 });
 

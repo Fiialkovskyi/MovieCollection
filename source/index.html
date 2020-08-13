@@ -5,7 +5,7 @@
   <title>Movie Collection</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/min/style.min.css" rel="stylesheet">
 </head>
 <body>
   <header class="page-header">
@@ -71,6 +71,7 @@
     </section>
 
     <article class="search">
+      <h2 class="visually-hidden">Search</h2>
       <form class="search-form" id="searchForm">
         <label class="search-form__text" for="searchField">Explore Movies & Series</label>
         <div class="search-form__wrapper">
@@ -80,9 +81,12 @@
 
       </form>
 
-      <section class="search-results" id="searchResults"></section>
+      <section class="search-results" id="searchResults">
+        <h2 class="visually-hidden">Search results</h2>
+      </section>
 
       <section class="search-pagination">
+        <h2 class="visually-hidden">Pagination</h2>
         <p class="search-pagination__items">Items per page: 10</p>
         <div class="search-pagination__pages" id="pagination"></div>
         <div class="search-pagination__links">
@@ -130,6 +134,7 @@
       </div>
 
       <section class="footer__copyright">
+        <h2 class="visually-hidden">Copyright</h2>
         <p class="page-footer__text">© Copyright 2017 SevenOaks. All rights reserved.  Privacy Policy  |  Share This</p>
       </section>
 
@@ -137,7 +142,6 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="http://malsup.github.com/jquery.cycle2.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="js/searchMovies.js"></script>
 </body>
 </html>
